@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Hk Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Jost-Regular.ttf') format('woff');
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --black : #000;
+    --white: #f0e9f2;
+    --white-1: #b2b2b2da;
+    --red: #ff3258;
+    --fontSize-huge:4rem;
+    --fontSize-large:3rem;
+    --fontSize-medium:2.2rem;
+    --fontSize-small:1.8rem;
+    --fontSize-small-1:1.5rem;
+    --fontSize-small-2:1.2rem;
+     
+    --padding:3em 10em;
+}
+body{
+  background: var(--black);
+  color: var(--white-1);
+  font-family: 'Hk Grotesk', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--fontSize-small);
+}
+h1{
+    font-size: var(--fontSize-large);
+    color: var(--white);
+}
+p{
+    font-size: var(--fontSize-medium);
+    color: var(--white-1);
+}
+
+     /*///////////////
+     //// HEADER ///
+     /////////////*/
+          
+     /* NAV  */
+header{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background:linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0, .4)), url(./images/sfondo.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: var(--padding);
+    }
+.nav-row{
+    width: 40%;
+    margin-right: 0;
+    margin-left: auto;
+}
+.ul-nav{
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+.li-nav{
+   list-style: none;
+   transition: all .2s;
+   border-bottom: 2px solid transparent;
+   padding-bottom: 0.6rem;
+   position: relative;
+}
+
+.a-nav{
+    transition: all .2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.6rem;
+}
+.a-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    display: inline-block;
+    height: 1rem;
+    background: var(--white);
+    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.a-nav:hover {
+    color: var(--red);
+}
+
+.a-nav:hover::after {
+    right: 0;
+    height: 2px;
+    background: var(--red);
+} 
+      /* Nome e contatto header  */
+.header-ctn{
+    position: absolute;
+    top: 25%;
+}
+.name-h1{
+    margin-bottom: 1.3em;
+    font-size: var(--fontSize-huge);
+}
+.paragraph-name{
+    margin-bottom: 1.1em;
+}
+.a-name{
+    font-size: var(--fontSize-small);
+    padding:.5em 1em;
+    background-color: var(--red);
+    color: var(--white);
+    border: 2px solid transparent;
+    transition: all .3s;
+}
+.a-name:hover{
+    background-color: transparent;
+    border:2px solid var(--red);
+}
+   /*//////////////
+   /// WORK  /////
+   /////////////*/
+.section-work{
+    padding: var(--padding);
+}
+.work-section{
+    font-size: var(--fontSize-huge);
+}
+.work-section::after{
+    content: '';
+    display: block;
+    width: 2.5em;
+    height: 2px;
+    background-color: var(--red);
+    margin: .5em  0 1.5em 0;
+}
+.my-work{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10em;
+}
+.my-work-description{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.work-title{
+    font-size: var(--fontSize-large);
+    color: var(--white);
+    margin-bottom: 0.8em;
+}
+.description{
+    font-size: var(--fontSize-small-1);
+    color: var(--white-1);
+    margin-bottom: 1.5em;
+}
+.ul-work{
+    margin-bottom: 1.5em;
+    margin-left:-1em;
+    font-size: var(--fontSize-small-2);
+}
+.link-ctn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.visit-site{
+    position: relative;
+    z-index: 1;
+    padding: .6rem;
+    border-bottom:1px solid var(--red);
+    font-size: var(--fontSize-small-1);
+   
+}
+.visit-site::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: transparent;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+.visit-site:hover::after ,
+.visit-site:focus::after{
+    right: 0;
+    height: 100%;
+    background-color: var(--red);
+}
+.github{
+    width: 35px;
+    height: 35px;
+    border: 2px solid #FFF;
+    margin-left: 2em;
+    margin-top: 0.4em;
+    border-radius: 50px;
+    background-color: #FFF;
+    transition: all .5s;
+}
+.github:hover{
+    transform: scale(1.1);
+}
+.my-rent-img{
+    width: 50%;
+    height: 100%;
+}
+.my-rent-img > a > img{
+    width: 100%;
+    height: 100%;
+}
