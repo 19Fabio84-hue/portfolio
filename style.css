@@ -47,7 +47,12 @@ p{
     font-size: var(--fontSize-medium);
     color: var(--white-1);
 }
-
+.hr{
+    width: 100%;
+    height: 1px;
+    /* background-color: var(--white-1); */
+    border: 1px solid rgb(194, 194, 194,0.1);
+}
      /*///////////////
      //// HEADER ///
      /////////////*/
@@ -138,6 +143,7 @@ header{
    /////////////*/
 .section-work{
     padding: var(--padding);
+    margin-top: 5em;
 }
 .work-section{
     font-size: var(--fontSize-huge);
@@ -227,4 +233,56 @@ header{
 .my-rent-img > a > img{
     width: 100%;
     height: 100%;
+    margin-top: 3em;
+    transition: all 1s;
+}
+.my-rent-img > a > img:hover{
+    transform: scale(1.1);
+}
+    /*////////////////// 
+    //// ABOUT ME ///*/
+    /* ///////////// */
+.section-about{
+    margin-top: 5em;
+    padding: var(--padding);
+}
+.about-title{
+    font-size: var(--fontSize-huge);
+}
+.about-title::after{
+    content: '';
+    display: block;
+    width: 2.5em;
+    height: 2px;
+    background-color: var(--red);
+    margin: .5em  0 1.5em 0;
+}
+.about-flex{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.about-img-ctn{
+    width: 50%;
+    height: 100%;
+}
+.about-img-ctn > img{
+    width: 100%;
+    height: 100%;
+}
+.description-about-ctn{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.about-description{
+    font-size: var(--fontSize-small-1);
+    line-height: 1.4em;
+    margin-bottom: 2em;
+}
+.about-contact{
+    border: 1px solid var(--red);
+    padding: .5em 1.5em;
+    width: auto;
 }
