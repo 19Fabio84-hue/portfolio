@@ -329,6 +329,7 @@ header{
     font-size: var(--fontSize-small-1);
     line-height: 1.3em;
     margin-bottom: 2em;
+    margin-top: -1em;
 }
 .email-ctn{
     display: flex;
