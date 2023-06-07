@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
 </head>
-<body>
+<body onload="document.body.classList.add('loaded')">
     <header id="'#">
         <nav class="nav-row">
             <div class="ul-ctn">
@@ -22,7 +23,19 @@
             <h1 class="name-h1">Piancatelli Fabio</h1>
             <p class="paragraph-name">Front End Developer</p>
             <a class="a-name" href="#contact">Get in Touch</a>
+            <section class="section-icon-small">
+                <i class="fa-brands fa-html5 small" style="color:#f60505"></i>
+               <i class="fa-brands fa-css3-alt small" style="color:#054afa;"></i>
+                <i class="fa-brands fa-square-js small" style="color:#efcc05"></i>
+               <i class="fa-brands fa-react small" style="color: #07e7e3;"></i>
+            </section>
         </div>
+        <section class="section-icon">
+            <div class="icon-first"><i class="fa-brands fa-html5 one" style="color:#fff"></i></div>
+            <div class="icon-second"><i class="fa-brands fa-css3-alt two" style="color:#fff;"></i></div>
+            <div class="icon-third"><i class="fa-brands fa-square-js three" style="color:#fff"></i></div>
+            <div class="icon-four"><i class="fa-brands fa-react four" style="color: #fff;"></i></div>
+        </section>
     </header>
            
                <!-- WORK  -->
@@ -119,20 +132,23 @@
             <!-- ABOUT  -->
             <section class="section-about" id="about">
                 <h1 class="about-title">About Me</h1>
-                <div class="about-flex">
-                    <div class="about-img-ctn">
-                        <img class="about-img" src="./images/34.jpg"/>
-                    </div>
+                
                     <div class="description-about-ctn">
+                        <span class="about-description-span" style="font-weight: 900;">
+                        Piacere di conoscerti , sono un aspirante sviluppatore web di Roma.
+                       </span>
                         <p class="about-description">
-                            Ciao! Sono Fabio, uno sviluppatore front-end con competenze in HTML, CSS, Tailwind CSS, JavaScript e React.
-                            Sono appassionato nel creare esperienze web coinvolgenti e mi impegno per la qualità del codice.
-                            Sono desideroso di imparare e rimanere aggiornato sulle nuove tecnologie.
+                            <br>
+                            La mia filosofia è quella di creare interfacce utente pulite e minimali che chiunque possa utilizzare.
+                            Sono appassionato , curioso e miro sempre all 'eccellenza in tutto ciò che faccio.
+                            Adoro imparare cose nuove e condividere le mie capicità e lavorare con le persone in modo che possano trarne beneficio.
+                            Fare qualcosa che gli altri possano usare con piacere vale tutto il duro lavoro necessario per realizzarlo.
                             Sfoglia il mio portfolio per vedere alcuni dei progetti che ho realizzato.
-                            Sono aperto alle opportunità di collaborazione e sono entusiasta di contribuire a progetti interessanti. Grazie per la visita!</p>
+                            Sono aperto alle opportunità di collaborazione e sono entusiasta di contribuire a progetti interessanti. Grazie per la visita!
+                        </p>
                         <a class="about-contact" href="#contact">Contact</a>
                     </div>
-                </div>
+             
 
             </section>
 
@@ -147,8 +163,8 @@
                     Sono disponibile per colloqui e per fornire ulteriori informazioni sul mio background e sulle mie capacità.<br>
                     Sono determinato a fare il mio ingresso nel settore come sviluppatore front-end e sono pronto per mettermi alla prova in un ambiente
                     lavorativo stimolante.<br>                    
-                    Grazie per aver preso in considerazione la mia candidatura e non vedo l'ora di poter contribuire
-                    con le mie competenze e la mia passione a un'azienda che valorizzi la creatività e l'innovazione</p>
+                    Grazie per aver preso in considerazione la mia candidatura e non vedo l'ora  con le mie competenze e la mia passione di poter collaborare
+                    con un'azienda che valorizzi la creatività e l'innovazione</p>
                     <div class="email-ctn">
                         <a class="email" href="mailto:piancatellif@gmail.com">Invia un Email</a>
                         <p class="number">Telefono : <span>380 / 1265411</span> </p>

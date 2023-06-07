@@ -19,7 +19,7 @@
     --black : #000;
     --white: #f0e9f2;
     --white-1: #b2b2b2da;
-    --red: #ff3258;
+    --red: rgb(255, 50, 88);
     --fontSize-huge:4rem;
     --fontSize-large:3rem;
     --fontSize-medium:2.2rem;
@@ -80,10 +80,159 @@ header{
         background-attachment: fixed;
         padding: var(--padding);
     }
-    .nav-row{
-        width: 40%;
-        margin-right: 0;
-        margin-left: auto;
+    /* ////ICON BIG  ////*/
+.section-icon{
+    background-color: transparent;
+    display: grid;
+    grid-auto-rows: 150px;
+    grid-template-columns: repeat(2 , 150px);
+    align-items: center;
+    border-radius: none;
+    position: absolute;
+    top: 26%;
+    right: 30%;
+    transition: all 3s;   
+}
+
+body.loaded .section-icon{
+    background-color: var(--red);
+    border-radius: 50%;
+}
+.section-icon > div{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.section-icon > div > i{
+    font-size: 3.5rem;
+} 
+@media(max-width:1800px){
+    .section-icon{right: 20%;}
+}
+@media(max-width:1500px){
+    .section-icon{
+        grid-auto-rows: 140px;
+        grid-template-columns: repeat(2 , 140px);}
+}
+@media(max-width:1400px){
+    .section-icon > div > i{
+        font-size: 3rem;
+    }
+}
+@media(max-width:1400px){
+    .section-icon {
+       right: 10%;
+    }
+}
+
+  /* HTML ICON  */
+.icon-first{
+    border-bottom: none;
+    border-right: none;
+    border-top-left-radius: 50%;   
+    transition: all 6s;
+}
+body.loaded .icon-first{
+    border-bottom: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+}
+@media(max-width:1000px){
+    .section-icon {
+       display: none;      
+    }
+}
+.icon-first > .one{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    transition: all 1.5s;
+    transform: translateX(-1000%) translateY(-1000%);
+}
+body.loaded .icon-first > i {
+    transform: translateX(0%) translateY(0%)
+}
+   /* CSS ICON  BIG */
+.icon-second{
+    border-bottom: none ;  
+    transition: all 6s;  
+}
+body.loaded .icon-second{
+    border-bottom: 2px solid var(--white) ;    
+}
+.icon-second > .two{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    transform: translateX(1000%) translateY(-1000%);
+    transition: all 2.5s;
+}
+body.loaded .icon-second > i{
+    transform: translateX(0%) translateY(0%);
+} 
+    /* JAVASCRIPT ICON  */
+.icon-third{
+    border-right: none;
+    transition: all 6s; 
+}
+body.loaded .icon-third{
+    border-right: 2px solid var(--white-1)
+}
+.icon-third > .three {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transform: translateX(-1000%) translateY(1000%);
+    transition: all 3s;
+}
+body.loaded .icon-third > i{
+    transform: translateX(0%) translateY(0%);
+}
+   /* ICON REACT  */
+.icon-four > .four {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    transform: translateX(1000%) translateY(1000%);
+    transition: all 3.5s;
+}
+body.loaded .icon-four > i {
+    transform: translateX(0) translateY(0);
+}
+   /*//// ICON SMALL////  */
+   .section-icon-small{
+    display: none;
+   }
+@media(max-width:1000px){
+    .section-icon-small{
+        display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+    margin: 10em auto 0 auto;
+    }
+}
+@media(max-width:600px){
+    .section-icon-small{
+    width: 80%;
+    }
+}
+@media(max-width:500px){
+    .section-icon-small{
+    width: 95%;
+    }.small{
+        font-size: 2.5rem;
+    }
+}
+.small{
+    position: relative;
+    font-size: 3rem;
+
+}
+.nav-row{
+  width: 40%;
+  margin-right: 0;
+  margin-left: auto;
     }
    
 .ul-nav{
@@ -364,7 +513,7 @@ header{
     width: 2.5em;
     height: 2px;
     background-color: var(--red);
-    margin: .5em  0 1.5em 0;
+    margin: .5em  0 1em 0;
 }
 .about-flex{
     display: flex;
@@ -384,15 +533,18 @@ header{
 .description-about-ctn{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 90%;
 }
-
+.about-description-span{
+    font-size: var(--fontSize-small-1);
+}
 
 .about-description{
     font-size: var(--fontSize-small-1);
     line-height: 1.4em;
     margin-bottom: 2em;
 }
+
 .about-contact{    
     text-align: center;
     border: 1px solid var(--red);
