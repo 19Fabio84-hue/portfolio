@@ -94,10 +94,10 @@ header{
     transition: all 3s;   
 }
 
-body.loaded .section-icon{
+/* body.loaded .section-icon{
     background-color: var(--red);
     border-radius: 50%;
-}
+} */
 .section-icon > div{
     text-align: center;
     width: 100%;
@@ -127,15 +127,29 @@ body.loaded .section-icon{
 }
 
   /* HTML ICON  */
+
+      /* CSS ICON  BIG */
 .icon-first{
     border-bottom: none;
     border-right: none;
-    border-top-left-radius: 50%;   
+    border-top-left-radius: 50%;  
     transition: all 6s;
 }
-body.loaded .icon-first{
+.icon-first::before{
+    content: '';
+    display: block;
+    background-color: var(--white);
+    width: 0px;
+    height: 0px;
+    border-top-left-radius: 50%;
+    transition: all 2s;
+}
+body.loaded .icon-first:before{
+    width: 100%;
+    height: 100%;
     border-bottom: 2px solid var(--white);
     border-right: 2px solid var(--white);
+    background-color: var(--red);
 }
 @media(max-width:1000px){
     .section-icon {
@@ -152,13 +166,25 @@ body.loaded .icon-first{
 body.loaded .icon-first > i {
     transform: translateX(0%) translateY(0%)
 }
-   /* CSS ICON  BIG */
 .icon-second{
     border-bottom: none ;  
     transition: all 6s;  
 }
-body.loaded .icon-second{
-    border-bottom: 2px solid var(--white) ;    
+.icon-second::before{
+    content: '';
+    display: block;
+    background-color: var(--white);
+    width: 0px;
+    height: 0px;
+    border-top-right-radius: 50%;
+    transition: all 2.5s;
+}
+body.loaded .icon-second:before{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid var(--white) ; 
+    border-left: 2px solid var(--white);
+    background-color: var(--red);
 }
 .icon-second > .two{
     position: absolute;
@@ -175,8 +201,21 @@ body.loaded .icon-second > i{
     border-right: none;
     transition: all 6s; 
 }
-body.loaded .icon-third{
-    border-right: 2px solid var(--white-1)
+.icon-third::before{
+    content: '';
+    display: block;
+    background-color: var(--white);
+    width: 0px;
+    height: 0px;
+    border-bottom-left-radius: 50%;
+    transition: all 3s;
+}
+body.loaded .icon-third:before{
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid var(--white) ; 
+    border-right: 2px solid var(--white-1);
+    background-color: var(--red);
 }
 .icon-third > .three {
     position: absolute;
@@ -195,6 +234,22 @@ body.loaded .icon-third > i{
     left: 30px;
     transform: translateX(1000%) translateY(1000%);
     transition: all 3.5s;
+}
+.icon-four::before{
+    content: '';
+    display: block;
+    background-color: var(--white);
+    width: 0px;
+    height: 0px;
+    border-bottom-right-radius: 50%;
+    transition: all 3.5s;
+}
+body.loaded .icon-four:before{
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid var(--white) ; 
+    border-left: 2px solid var(--white-1);
+    background-color: var(--red);
 }
 body.loaded .icon-four > i {
     transform: translateX(0) translateY(0);
@@ -227,7 +282,6 @@ body.loaded .icon-four > i {
 .small{
     position: relative;
     font-size: 3rem;
-
 }
 .nav-row{
   width: 40%;
@@ -603,8 +657,6 @@ body.loaded .icon-four > i {
         width: 100%;
     }.about-contact{
         align-self: center;
-    }.about-description{
-        text-align: center;
     }
 }
         /*/////////////// 
